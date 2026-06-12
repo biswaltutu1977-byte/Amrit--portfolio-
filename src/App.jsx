@@ -35,10 +35,12 @@ const data = {
     { name: "Cost Accounting", institution: "Dreims University" },
     { name: "Management Theory & Practices", institution: "Dreims University" },
     { name: "Business Communication", institution: "Dreims University" },
-    { name: "Computer for Managers", institution: "Dreims University" },
-  ],function useInView(threshold = 0.15) {
-  const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
+    { name: "Computer for Managers", institution: "Dreims University " },
+  ],
+};
+
+function useInView(threshold = 0.15) {
+const ref = useRef(null); 
   useEffect(() => {
     const obs = new IntersectionObserver(
       ([e]) => { if (e.isIntersecting) setVisible(true); },
